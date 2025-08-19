@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Register</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 rounded-4" style="max-width: 500px; width: 100%;">
+      <h3 class="text-center mb-4">Register</h3>
+      <form action="register.php" method="post">
+        
+        <!-- صورة البروفايل -->
+        <div class="text-center mb-3">
+          <label for="photo" class="d-inline-block">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAAD39/dISEhaWlpPT0/19fXl5eXw8PA6OjrU1NSNjY1+fn7i4uLQ0NDFxcW9vb2fn5+EhISUlJQzMzO3t7ekpKRhYWEWFhZnZ2cqKioeHh51dXVFRUXr6+uxsbERERGHh4dtbW0sLCxWVlY+Pj522n8zAAADx0lEQVR4nO2dCXIiMQxFMWHvQNgJoRMIk7n/Fae6OpkKW9uWjCRT/51Ar0x7kWTTagEAAAAAAAAAAAAAAAAAAJwweFlsXl3NcLuYfmgHlJZR8ebOeStG2mGloj17vdCrOcza2sEloD2/oVfzmb3jotGvYqYdIovJwSvo3G6sHSadIsCvYqEdKJVuoKBzXe1QSQxCfqE/HAba4cbzEeFXkd0OIFbQucxGsR0t6FxeK+OSYDjUDjqGkiDo3LN22OFMSYLOvWgHHgrlI6zRjjyUI9mw1A49jDFZ0Lk8tqhPDMOOdvAhjBiCeQzilmWYwZfYYwnmsLNZMw332gJehkzDd20BHwOmoHM9bQUPK7bhVFvBwzPb0Pr+m/sZOrfUVvDAFrS+/Y5PXlxiO53B27LV2N64vSQwtF2S4i8Wzk20JRp5fENqhiYfwxTfoW3DFHOp7Zmmn8DQ9mqRYk9j/HARU1K7gbaCB16WpsJ6um3GNrTeucCfTG1Ppa0EU422gBd60aLGfsKUu6vJoMLGNNQOPwB/n1cT1mfSCnp9NJMhDO/1ukYm/V+PPoSt1p4saL8s881foqD5qsx/qOUZ25nSE2jpGus1mRMoR4wclsJfNPevX+NTO+RYYsts1otqV4hTzG4EK2I2qJnsZc4JX/lX2qFSGe+C/N6MZ0gbCfmlZvoL/WHgSy8eM9rI3GDc1BJd9rXDS0Jv9ueq3nJtv4ktmP7s60yvs87uDomX/nRdzMuynBfr6WP8OAEAAAAA8mW8Kjbd7lMw3W86nc2xfC72tnu+evtOwInXx2Zl9cgxSaH3LWlxJKeXL9BwWFqr548ol7ebGZrKT/HvkVzDTpaYcy22kZ2RNECKzudbmPga+b16TRioe/PaZ/ystQXvO4IVyjWNFL35PlRX/xSN63408/5htSUuis+6xBfraahVp+620l+gtfK/ixkq9e9PxAS12tup3WsUVJ6sS3GJKxyNoxTttSsqGg1FooIavbUS+7XfyJ+j7nOsv81c3PDW28D3YictyH+lJRbpi5eSy32N9CGK+1hSPNL5jE9xQ+ncovRUKr/mc68ZxiN9MZF/ozmWIwwTsxE33MIwMemqoaFsYAhDGJ5x3tR8f6Qzio9vGP7fFTC0ash50hqGMJRBru4EQxhSkSytwRCGMIQhDHM15L8uD0MYwpCL/EzzJWwov/N+EjaUPwHDEIYwhCEMYQhDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjC8FEN07/P5kP6X+Xb8ggbAgAAAAAAAAAAAAAAAADW+AcyKkxU9Fyv1gAAAABJRU5ErkJggg==" 
+                id="previow"  alt="Upload Photo" class="rounded-circle border p-1" width="100" height="100" style="cursor:pointer;">
+          </label>
+          <input type="file" id="photo" name="photo" style="display: none;">
+        </div>
+        <!-- error -->
+              <div id="error"></div>
+        <!-- First Name -->
+        <div class="mb-3">
+          <label for="fName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter First Name">
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3">
+          <label for="lName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lName" name="lName" placeholder="Enter Last Name">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="pass" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter Password">
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-3">
+          <label for="confirm" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirm" name="confirm" placeholder="Confirm Password">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">Register</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <script src="/useracounts/Script/register.js"></script>
+<!-- Bootstrap JS + Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    
+</body>
+</html>
