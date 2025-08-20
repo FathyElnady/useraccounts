@@ -5,7 +5,7 @@ session_start();
 
  if ($_SESSION['otp'] === $num) {
         unset($_SESSION['otp']); 
-        header("Location: CRUD.html");
+        header("Location: CRUD/index.php");
         exit();
     } else {
         header("Location: otp.html");
